@@ -6,7 +6,7 @@
         container.id = CONTAINER_ID;
     
         var script=document.createElement('script');
-        script.src='http://localhost:9615/youtubeBorders.js';
+        script.src='https://nietrominer00.github.io/WithoutBorders/youtubeBorders.js';
     
         container.appendChild(script);
         document.body.appendChild(container);
