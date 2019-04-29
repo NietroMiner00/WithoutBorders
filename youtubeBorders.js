@@ -19,5 +19,7 @@ function changeAllDisplays(){
     // subscribe button(right bottom corner)
     changeDisplay(container.getElementsByClassName("ytp-player-content ytp-iv-player-content")[0], "none");
 
+    toggleCursor();
+
     once = true;
 }

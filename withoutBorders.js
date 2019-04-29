@@ -28,6 +28,12 @@ function removeDisplay(elem){
     elem.remove();
 }
 
+function toggleCursor(){
+    var elem = document.getElementById("movie_player");
+    if(elem.style.cursor == "none") elem.style.cursor = "";
+    else elem.style.cursor = "none";
+}
+
 document.addEventListener('keydown', function(event){
     if(event.keyCode == 72){
         changeAllDisplays();
