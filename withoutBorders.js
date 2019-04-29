@@ -29,7 +29,7 @@ function removeDisplay(elem){
 }
 
 function toggleCursor(){
-    var elem = document.getElementById("movie_player");
+    var elem = document.getElementsByClassName("html5-video-container")[0];
     if(elem.style.cursor == "none") elem.style.cursor = "";
     else elem.style.cursor = "none";
 }
