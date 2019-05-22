@@ -1,17 +1,24 @@
+var HOST = "https://nietrominer00.github.io/WithoutBorders/";
+//var HOST = "http://localhost:9615/";
+
 (function(){
     var CONTAINER_ID = 'remover';
-    var HOSTNAME = 'www.youtube.com';
-    if(!document.getElementById(CONTAINER_ID)&&window.location.hostname == HOSTNAME){
+    if(!document.getElementById(CONTAINER_ID)){
         var container = document.createElement('div');
         container.id = CONTAINER_ID;
-    
-        var script=document.createElement('script');
-        script.src='https://nietrominer00.github.io/WithoutBorders/youtubeBorders.js';
-    
+        var script = null;
+        if(window.location.hostname == "www.youtube.com"){
+            script=document.createElement('script');
+            script.src= HOST + 'youtubeBorders.js';
+        }else if(window.location.hostname == "www.amazon.de"){
+            script=document.createElement('script');
+            script.src= HOST + 'primeBorders.js';
+        }else return;
         container.appendChild(script);
         document.body.appendChild(container);
         console.log("Injection finished");
     }else console.log("Injection failed");
+
 })();
 
 function changeDisplay(elem, stand){
@@ -28,8 +35,7 @@ function removeDisplay(elem){
     elem.remove();
 }
 
-function toggleCursor(){
-    var elem = document.getElementsByClassName("html5-video-container")[0];
+function toggleCursor(elem){
     if(elem.style.cursor == "none") elem.style.cursor = "";
     else elem.style.cursor = "none";
 }

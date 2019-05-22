@@ -22,7 +22,7 @@ function changeAllDisplays(){
     // subscribe button(right bottom corner)
     changeDisplay(document.getElementsByClassName("ytp-player-content ytp-iv-player-content")[0], "none");
 
-    toggleCursor();
+    toggleCursor(document.getElementsByClassName("html5-video-container")[0]);
 
     once = true;
 }
